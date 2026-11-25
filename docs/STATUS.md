@@ -36,7 +36,8 @@
 Claude depoya yazar; ChatGPT yalnızca okur; ürün direktörü kararları proje sahibi aracılığıyla Claude'a iletilir.
 
 ## Bekleyen proje sahibi girdileri (sırayla)
-1. Mac ortam kontrol komutunun çıktısı (Görev 001, Bölüm 1).
+1. ~~Mac ortam kontrol komutunun çıktısı~~ ALINDI → `docs/QA/faz0/ORTAM-RAPORU.md` (Xcode 27.2, iOS SDK 27.2; yalnızca iOS 26.5 simülatörü kurulu, iOS 17 simülatörü yok).
+   1a. iOS 17 simülatör çalışma zamanı kurulum onayı.
 2. Yerel Supabase (OrbStack/Docker) kurulum onayı.
 3. Ödünç ikinci iPhone'un modeli ve iOS sürümü.
 4. Supabase Pro organizasyonu Usage ekranı verileri.
