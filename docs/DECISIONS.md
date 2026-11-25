@@ -24,6 +24,9 @@ Kayıt türleri: **[TAM METİN]** ürün direktörünün dosya olarak ilettiği 
 | 13 | Ortak geçiş hakkı ve destek adresi | Tam metin |
 | 14 | Ürün kapsam kilidi (koşullu) | Özet |
 | Denetim | Nihai şartname denetimi ve onay (Revizyon 4 talimatı) | Tam metin |
+| Rev4 Kabul | Revizyon 4 kabulü ve Faz 0 hazırlık onayı | Tam metin |
+| Görev 001 | Faz 0 ücretsiz hazırlık talimatı | Tam metin |
+| Görev 001 Denetimi | Kanal güvenlik sürümü, iOS 17 test stratejisi, cihaz içi ölçüm | Tam metin |
 
 
 ---
@@ -3030,3 +3033,461 @@ App Store yayın onayı: VERİLMEDİ.
 **ÜRÜN DİREKTÖRÜ ONAYI VERİLMİŞTİR.**
 
 Nihai bütçe, marka ve proje başlangıç onayı proje sahibine aittir.
+
+
+---
+
+## REVİZYON 4 KABULÜ VE FAZ 0 HAZIRLIK ONAYI [TAM METİN]
+
+**FAMILYGUARD — REVİZYON 4 KABULÜ VE FAZ 0 HAZIRLIK ONAYI**
+
+**Ürün baz çizgisi: ONAYLANDI.**
+
+Revizyon 3 ve Revizyon 4 karşılaştırılmıştır. Nihai denetimde istenen 10 netleştirme işlenmiştir. Revizyon 4 Markdown ve TXT içerikleri uyumludur.
+
+Karar geçmişindeki açıkça belirtilmiş özet kayıtlar kabul edilmiştir.
+
+V1.1 — Revizyon 4, ürün kuralları için tek geçerli kaynak olacaktır.
+
+**A. KAPSAM KİLİDİ**
+
+Ürün planlama aşaması tamamlanmıştır.
+
+- Karar 01–14 onaylıdır.
+- V1 sekiz temel modülle sınırlıdır.
+- Abonelik ekonomisi değişmeyecektir.
+- Yeni özellik araştırması başlatılmayacaktır.
+- Revizyon 5 hazırlanması gerekmemektedir.
+
+**B. FAZ 0 GÖREV LİSTESİ**
+
+F0-01 ile F0-19 arasındaki 19 fizibilite görevi kabul edilmiştir.
+
+T-18 ve T-19'un eklenmesi mevcut şartname gerekliliklerinin doğrulanmasıdır; kapsam genişlemesi değildir.
+
+Görevler dört çalışma grubunda yönetilecektir.
+
+GRUP A — ALTYAPI VE MALİYET
+
+F0-10, F0-02, F0-03, F0-09, F0-12.
+
+GRUP B — KİMLİK VE ACİL YARDIM GÜVENLİĞİ
+
+F0-04, F0-05, F0-06, F0-14, F0-16, F0-18.
+
+GRUP C — GERÇEK CİHAZ VE KONUM TESTLERİ
+
+F0-01, F0-07, F0-08, F0-15, F0-17, F0-19.
+
+GRUP D — EKONOMİ VE SONUÇ DEĞERLENDİRMESİ
+
+F0-13, F0-11.
+
+Gruplar arasındaki teknik bağımlılıklar korunacaktır. Bağımsız ve kaynak gerektirmeyen görevler proje sahibinin başlangıç onayı sonrasında paralel yürütülebilecektir.
+
+**C. ZORUNLU GÜVENLİK KOŞULLARI**
+
+1. Hukuki değerlendirme tamamlanmadan gerçek kişisel konum verileri uzak test veya üretim sunucularına aktarılmayacaktır.
+2. Sentetik konumlar ve hayalî aile hesapları kullanılacaktır.
+3. Gerçek cihaz konum ölçümlerinin işlenmesi ve saklanması için gerekli hukuki ve teknik yöntem önceden onaylanacaktır.
+4. App Attest alternatifleri aynı hassas işlem güvenliği kabul kriterlerini karşılamalıdır.
+5. Kısa ömürlü token kullanımı tek başına cihaz bağlama kanıtı değildir.
+6. Güvenli bölgelerin dönüşümlü izlenmesi gibi alternatifler kullanıcının bütün bölgelerinin aktif izlendiği yönünde yanlış bilgi oluşturmamalıdır.
+7. SOS yüksek hassasiyet profili sona erdiğinde düzenli paylaşımı kapalı kullanıcıda normal takip yeniden başlatılmayacaktır.
+8. Testlerde gerçek acil yardım servislerine çağrı veya gerçek ailelere SOS bildirimi gönderilmeyecektir.
+9. Fizibilite raporunun tamamlanması ile teknik kabul birbirinden ayrılacaktır.
+10. Başarısız testler PASS olarak işaretlenmeyecektir.
+
+**D. RAPORLAMA**
+
+Her görev aşağıdaki durumlardan biriyle raporlanacaktır:
+
+- NOT STARTED
+- IN PROGRESS
+- PASS
+- FAIL
+- BLOCKED
+
+Her raporda:
+
+- Gerçekleştirilen test.
+- Ölçülen sonuç.
+- Beklenen sonuç.
+- Test ortamı.
+- Kanıt dosyaları.
+- Başarısızlık nedeni.
+- Alternatif çözüm.
+- Gerekli ürün direktörü kararı.
+
+bulunacaktır.
+
+Kanıtsız başarı bildirimi yapılmayacaktır.
+
+**E. HARCAMA VE ALTYAPI SINIRLARI**
+
+Proje sahibi onayı olmadan:
+
+- Yeni cihaz satın alınmayacaktır.
+- Supabase test projesi oluşturulmayacaktır.
+- Ücretli izleme servisi alınmayacaktır.
+- Hukuki danışmanlık satın alınmayacaktır.
+- Marka tescil başvurusu yapılmayacaktır.
+- Apple Critical Alerts başvurusu gönderilmeyecektir.
+- Mevcut VDOX Lab altyapısı değiştirilmeyecektir.
+
+Underworld ve Brain Lab projelerine dokunulmayacaktır.
+
+Üretim kodlaması ve canlı altyapı kurulumu yasaktır.
+
+**F. MARKA VE TASARIM**
+
+FamilyGuard iç kod adı olarak korunacaktır.
+
+Wingfold koşullu birinci, Eavely koşullu yedek marka adayıdır.
+
+Nihai marka seçimi proje sahibine aittir.
+
+Soft Premium tasarım yönü onaylıdır.
+
+Nihai marka seçimi ve gerekli kontroller tamamlanmadan kalıcı marka kayıtları ve nihai görsel varlıklar oluşturulmayacaktır.
+
+**G. SON DURUM**
+
+Ürün şartnamesi: ONAYLI.
+
+Ürün kapsamı: KİLİTLİ.
+
+Karar geçmişi: KABUL EDİLDİ.
+
+Faz 0 görev planı: ONAYLI.
+
+Faz 0 görev ilerlemesi: 0/19.
+
+Faz 0 başlangıcı: PROJE SAHİBİ ONAYI BEKLİYOR.
+
+Marka seçimi: BEKLİYOR.
+
+Hukuki uygunluk: BEKLİYOR.
+
+Faz D tasarım: BEKLİYOR.
+
+Üretim kodlaması: BAŞLANMAYACAK.
+
+Yeni şartname veya yeni ürün kararı hazırlama. Mevcut belgeleri koru ve proje sahibinin başlangıç onayını bekle.
+
+
+---
+
+## FAZ 0 / GÖREV 001 — ÜCRETSİZ HAZIRLIK TALİMATI [TAM METİN]
+
+**FAMILYGUARD — FAZ 0 / GÖREV 001 — ÜCRETSİZ HAZIRLIK VE ARAŞTIRMA**
+
+Proje sahibi başlangıç onayı vermiştir.
+
+**PROJE SAHİBİ KARARLARI**
+
+- Marka adı henüz seçilmemiştir.
+- FamilyGuard iç kod adı kullanılmaya devam edilecektir.
+- İkinci iPhone mevcut veya ödünç cihazlardan temin edilecektir.
+- Supabase test projesi şimdilik oluşturulmayacaktır.
+- Faz 0 ücretsiz hazırlık ve araştırmaları başlatılacaktır.
+- Yeni harcama onayı verilmemiştir.
+
+**1. ÇALIŞMA KURALLARI**
+
+Önce mevcut belgeleri oku.
+
+- FAMILYGUARD_V1.1_REV4_ONAYLI_BAZ_CIZGISI.md
+- FAMILYGUARD_KARAR_GECMISI.md
+- FAMILYGUARD_FAZ0_FIZIBILITE_GOREVLERI.md
+
+Revizyon 4 tek geçerli ürün kaynağıdır.
+
+Önce bir TODO listesi oluştur. Her hazırlık tamamlandığında işaretle. Daha önce tamamlanmış işleri tekrar yapma.
+
+**2. MEVCUT GELİŞTİRME ORTAMINI KONTROL ET**
+
+- macOS sürümü.
+- Xcode sürümü.
+- Swift sürümü.
+- Yüklü iOS SDK sürümleri.
+- Mevcut iPhone simülatörleri.
+- iOS 17 minimum deployment target uyumluluğu.
+- Apple Developer hesabında mevcut erişim ve yetenekler.
+- Gerçek cihaz testine yönelik mevcut araçlar.
+
+Herhangi bir kurulum veya hesap değişikliği yapmadan mevcut durumu raporla.
+
+**3. SUPABASE ÜCRETSİZ ÖN ARAŞTIRMA**
+
+- Mevcut Pro organizasyonunun kota ve maliyet yapısını incele.
+- Mevcut projelerin kota kullanımını erişim varsa salt okunur olarak kontrol et.
+- Ayrı test projesinin oluşturacağı tahmini ek maliyeti hesapla.
+- Ücretsiz veya yerel test alternatiflerini araştır.
+- Supabase CLI ile yerel fizibilite imkânını değerlendir.
+- Private Broadcast ve RLS testlerinin hangi bölümlerinin yerel ortamda yapılabileceğini belirle.
+
+Supabase projesi oluşturma.
+
+Underworld ve Brain Lab projelerine hiçbir değişiklik yapma.
+
+**4. APPLE TEKNİK ARAŞTIRMASI**
+
+Apple'ın güncel resmî belgeleri üzerinden araştır:
+
+- Core Location.
+- CLMonitor.
+- Significant Location Change.
+- Visits.
+- Arka plan konum izinleri.
+- Uygulamanın zorla kapatılması sonrasındaki davranışlar.
+- App Attest.
+- Time Sensitive Notifications.
+- Critical Alerts.
+- APNs bildirim lokalizasyonu.
+- MessageUI.
+- StoreKit 2.
+- Cihaz veri koruma sınıfları.
+
+Her konu için iOS 17 uyumluluğunu, işletim sistemi sınırlamalarını ve gerçek cihazda doğrulanması gereken noktaları raporla.
+
+Critical Alerts başvurusu gönderme.
+
+**5. İKİNCİ IPHONE GEREKSİNİMLERİ**
+
+Mevcut iPhone 17 Pro Max ile birlikte test edilecek ikinci cihaz için:
+
+- Minimum donanım gereksinimleri.
+- Önerilen eski nesil iPhone modelleri.
+- Minimum iOS sürümünü gerçek cihazda test etme imkânı.
+- Pil sağlığının test sonuçlarına etkisi.
+- İki cihazlı test senaryoları.
+
+hazırla.
+
+Cihaz satın alma işlemi yapma.
+
+**6. BAĞIMSIZ İZLEME SERVİSİ**
+
+Ücretsiz sunucu izleme seçeneklerini araştır.
+
+- Kontrol aralığı.
+- Ücretsiz kullanım limitleri.
+- Kesinti bildirimleri.
+- Supabase'den bağımsız çalışabilme.
+- Kişisel veri içermeyen sağlık kontrolü.
+- Ücretli plana geçme gereksinimleri.
+
+Hesap oluşturma veya ücretli abonelik başlatma.
+
+**7. HUKUKİ HAZIRLIK**
+
+Supabase'e iletilecek veri aktarımı ve standart sözleşme sorularını hazırla.
+
+Hukuk uzmanına danışılacak konuların kontrol listesini oluştur.
+
+- KVKK.
+- GDPR.
+- Çocukların konum verileri.
+- Veli doğrulaması.
+- Uluslararası veri aktarımı.
+- Veri saklama ve silme.
+- Yetişkin hesabına dönüşüm.
+- Kötüye kullanım ve izinsiz takip riskleri.
+
+Henüz e-posta gönderme veya ücretli danışmanlık alma.
+
+Gerçek kişisel veri işleme.
+
+**8. FAZ 0 BAĞIMLILIK TABLOSU**
+
+F0-01 ile F0-19 arasındaki bütün görevleri aşağıdaki durumlara göre sınıflandır:
+
+- Ücretsiz araştırmayla hazırlanabilir.
+- Yerel ortamda test edilebilir.
+- İkinci gerçek iPhone gerektirir.
+- Supabase test projesi gerektirir.
+- Hukuki onay gerektirir.
+- Proje sahibi bütçe onayı gerektirir.
+
+Araştırma tamamlanmış olsa bile teknik test yapılmadan görevi PASS olarak işaretleme.
+
+**9. RAPORLAMA**
+
+Hazırlık raporunda şunlar bulunmalıdır:
+
+- Tamamlanan araştırmalar.
+- Resmî kaynak bağlantıları.
+- Doğrulanmış bilgiler.
+- Belirsiz bilgiler.
+- Gerekli kaynaklar.
+- Tahmini maliyetler.
+- Teknik engeller.
+- Proje sahibinden gereken kararlar.
+- 19 fizibilite görevinin güncel durum tablosu.
+
+**KESİN SINIRLAR**
+
+- Üretim kodlamasına başlanmayacak.
+- Yeni Supabase projesi oluşturulmayacak.
+- Canlı altyapı kurulmayacak.
+- Mevcut uygulamalar değiştirilmeyecek.
+- Kalıcı Bundle ID oluşturulmayacak.
+- App Store Connect uygulama kaydı oluşturulmayacak.
+- Gerçek kişisel veri uzak sunuculara gönderilmeyecek.
+- Harcama yapılmayacak.
+- Yeni ürün özelliği önerilmeyecek.
+- Şartname yeniden yazılmayacak.
+- Yeni marka araştırma turu başlatılmayacak.
+
+Yalnızca Görev 001 kapsamındaki ücretsiz hazırlıkları tamamla ve sonuç raporunu ürün direktörüne sun.
+
+**FAZ 0 ÜCRETSİZ HAZIRLIK: BAŞLANGIÇ ONAYI VERİLDİ.**
+
+
+---
+
+## FAZ 0 / GÖREV 001 DENETİMİ VE TEKNİK KARARLAR [TAM METİN]
+
+**FAMILYGUARD — FAZ 0 / GÖREV 001 DENETİMİ VE TEKNİK KARARLAR**
+
+**Denetim sonucu: HAZIRLIK RAPORU KABUL EDİLDİ.**
+
+GOREV-001-RAPORU.md dosyası ürün direktörü tarafından doğrudan GitHub üzerinden okunmuştur.
+
+**A. REALTIME KANAL GÜVENLİK SÜRÜMÜ — ONAYLANDI**
+
+1. Aile kanalları `family:<id>:v<n>` biçiminde güvenlik sürümü içerecektir.
+2. Kanal güvenlik sürümü yalnızca sunucu tarafından yönetilecektir.
+3. Aile üyeliğinin, konum erişim yetkisinin veya cihaz yetkisinin iptali durumunda ilgili kanal güvenlik sürümü değiştirilecektir.
+4. Yetki iptali ve güvenlik sürümünün değiştirilmesi atomik olarak gerçekleştirilecektir.
+5. Yetki iptalinden sonra üretilen konum verileri eski kanala gönderilmeyecektir.
+6. Yeni kanalın tahmin edilebilir olması güvenlik açığı oluşturmamalıdır. Kanal adını bilmek erişim yetkisi sağlamayacaktır.
+7. Yeni kanala katılımda aktif aile üyeliği, cihaz yetkisi, güncel güvenlik sürümü ve ilgili veri erişim izinleri sunucu tarafında doğrulanacaktır.
+8. Bir aile kanalındaki bütün alıcıların aynı konum verilerine erişim yetkisine sahip olduğu varsayılmayacaktır. Gerekirse alıcı bazlı veya yetki kapsamına göre ayrılmış kanallar kullanılacaktır.
+9. Yetkili kullanıcılar yeni kanala güvenli biçimde yeniden abone olacaktır.
+10. Yeniden bağlantıda son konum sorgulanacak ve eski verinin yeni verinin üzerine yazılması engellenecektir.
+11. Kısa JWT süresi ek güvenlik önlemidir; tek başına erişim iptali mekanizması değildir.
+12. Kanal döndürme işlemi SOS ve diğer kritik bildirimleri kesintiye uğratmayacaktır.
+13. Daha önce yetkili kullanıcıya iletilmiş verilerin veya ağda bulunan eski mesajların geriye dönük olarak geri alınabileceği vaat edilmeyecektir.
+
+**F0-02 EK TESTLERİ**
+
+- Üç istemci: konum gönderen, yetkisi devam eden izleyici, yetkisi iptal edilen izleyici.
+- Eski JWT ile yeni kanala erişim denemesi.
+- Yeni kanal adını tahmin ederek erişim denemesi.
+- Eski kanala yeniden abone olma denemesi.
+- Eşzamanlı yetki iptali ve konum yazımı.
+- Birden fazla eşzamanlı yetki değişikliği.
+- Cihaz iptali.
+- Aileden ayrılma.
+- Konum erişim izninin kaldırılması.
+- Yetkili izleyicinin güvenli yeniden bağlantısı.
+- Eski kanalın yetki iptali sonrasında oluşturulan konum verilerini almaması.
+- Kritik yardım olaylarının çalışmaya devam etmesi.
+
+Yetkisiz konum erişimi P0 yayın engelidir.
+
+Önce yerel ortamda, daha sonra onaylı barındırılan test ortamında doğrulanacaktır. Yerel test başarısı tek başına üretim güvenliği kabulü değildir.
+
+**B. iOS 17 TEST STRATEJİSİ — KOŞULLU ONAYLANDI**
+
+1. Minimum iOS sürümü 17 olarak korunacaktır.
+2. Kullanılabilir ve uyumlu Xcode ortamında iOS 17 simülatör testleri gerçekleştirilecektir.
+3. iOS 17 üzerinde desteklenmeyen API'ler için availability kontrolleri ve alternatif uygulamalar doğrulanacaktır.
+4. Gerçek cihaz testleri mevcut iPhone 17 Pro Max ve mevcut veya ödünç ikinci iPhone ile gerçekleştirilecektir.
+5. İkinci cihazın modeli, iOS sürümü ve pil sağlığı kaydedilecektir.
+6. Sırf iOS 17 testi amacıyla yeni telefon satın alınmayacaktır.
+7. Cihazların mevcut işletim sistemleri proje sahibinin izni olmadan güncellenmeyecek veya değiştirilmeyecektir.
+8. Aşağıdaki işlevlerde simülatör testleri gerçek cihaz testlerinin yerine geçmeyecektir:
+
+- Arka plan konumu.
+- Güvenli bölge algılama.
+- Pil tüketimi.
+- Cihaz yeniden başlatma davranışı.
+- Uygulamayı zorla kapatma davranışı.
+- App Attest.
+- SMS ve telefon araması.
+- Gerçek APNs bildirimleri.
+- Veri koruma sınıfları.
+
+9. Test raporlarında simülatör ve fiziksel cihaz sonuçları ayrı tutulacaktır.
+10. iOS 17 gerçek donanımda doğrulanamamış güvenlik işlevleri açıkça BELİRSİZ olarak işaretlenecektir.
+11. Gerekli kritik gerçek cihaz testleri tamamlanamazsa yayın öncesinde minimum iOS sürümü yeniden değerlendirilecektir.
+12. iOS 17 simülatör çalışma zamanının mevcut Mac ve Xcode ortamında kullanılabilir olduğu henüz varsayılmayacaktır.
+
+Bu karar Faz 0 test yaklaşımının kabulüdür. iOS 17 için kesin yayın onayı değildir.
+
+**C. GERÇEK KONUMUN YALNIZCA CİHAZDA SAKLANMASI — HUKUKİ ÖN DEĞERLENDİRMEYE SUNULMASI ONAYLANDI**
+
+F0-01, F0-08, F0-15 ve F0-19 için cihaz içi ölçüm yöntemi hukuki değerlendirmeye sunulacaktır.
+
+Aşağıdaki şartlar uygulanacaktır:
+
+1. Testlerde çocukların gerçek konum verileri kullanılmayacaktır.
+2. Yalnızca hukuki değerlendirmede uygun bulunan, bilgilendirilmiş yetişkin test katılımcıları kullanılabilecektir.
+3. Gerçek konum verileri uzak test veya üretim sunucularına gönderilmeyecektir.
+4. Ham konum verileri cihazın korumalı yerel depolama alanında tutulacaktır.
+5. Konum içeren test dosyaları bulut yedeklerine, analitik servislerine ve hata raporlarına dahil edilmeyecektir.
+6. Gerçek koordinatlar GitHub deposuna, ChatGPT sohbetine veya Claude sohbetine yüklenmeyecektir.
+7. Dışa aktarılan raporlar mümkün olduğunca yalnızca anonimleştirilmiş ölçüm sonuçları içerecektir:
+
+- Konum güncelleme aralığı.
+- Mesafe farkı.
+- Doğruluk dağılımı.
+- Gecikme süresi.
+- Algılanan ve kaçırılan bölge olayları.
+- Pil tüketimi.
+
+8. Ev adresi, iş adresi, gerçek güzergâh ve kişiyi belirlenebilir kılan bilgiler raporlara eklenmeyecektir.
+9. Harita ekran görüntülerinde gerçek konum bilgisi kullanılmayacaktır.
+10. Ham kayıtlar yalnızca onaylı test amacıyla ve hukuken belirlenen süre boyunca saklanacak, ardından güvenli biçimde silinecektir.
+11. Yerel saklama yöntemi kişisel veri işleme yükümlülüklerini ortadan kaldırmaz.
+12. Hukuki ön değerlendirme tamamlanmadan gerçek konum ölçümlerine başlanmayacaktır.
+
+Bu karar hukuki uygunluk onayı değil, önerilen yöntemin hukuk uzmanına sunulması için verilen ürün direktörü onayıdır.
+
+**D. RAPORDAKİ DİĞER KONULAR**
+
+1. Bölüm 3'teki Apple teknik tablosunun tamamı resmî kaynaklarla satır satır doğrulanacaktır.
+2. Özellikle uygulamanın kullanıcı tarafından zorla kapatılması ile işletim sistemi tarafından sonlandırılması birbirinden ayrılacaktır.
+3. Zorla kapatılan uygulamanın konum olaylarıyla yeniden başlatılacağı doğrulanmadan varsayılmayacaktır.
+4. iOS 27 cihaz uyumluluğu resmî Apple belgeleriyle doğrulanacaktır.
+5. Bağımsız izleme servislerinin ücretsiz planları, ticari kullanım koşulları ve kontrol aralıkları resmî kaynaklardan doğrulanacaktır.
+6. Supabase yerel çalışma ortamı önerisi kabul edilmiştir. Ancak kurulum için proje sahibi onayı gereklidir.
+7. Yerel ortamın tamamen risksiz olduğu iddia edilmeyecektir. Ağ erişimi, test anahtarları, loglar ve yerel veri saklama güvenliği değerlendirilecektir.
+8. Supabase Pro organizasyonunun gerçek kullanım verileri elde edilene kadar maliyet tahminleri kesin bütçe olarak kabul edilmeyecektir.
+
+**E. ÇALIŞMA DÜZENİ**
+
+GitHub deposu: hllkrdmr-netizen/familyguard
+
+Claude raporları, karar kayıtlarını ve proje durumunu depoya yükleyecektir.
+
+ChatGPT depoya yalnızca salt okunur erişecektir. Dosya, commit, dal veya pull request oluşturmayacaktır.
+
+Ürün direktörü kararlarını sohbet üzerinden proje sahibine iletecektir. Proje sahibi kararları Claude'a aktaracaktır.
+
+**F. SONRAKİ GÖREV**
+
+Görev 001 denetim sonucunu karar geçmişine ve durum raporuna kaydet.
+
+Faz 0 görev ilerlemesi 0/19 PASS olarak korunacaktır.
+
+Bölüm 3'teki Apple teknik araştırmasını resmî belgelerle doğrula. İzleme servislerinin belirsiz bilgilerini ücretsiz araştırma kapsamında tamamla.
+
+Proje sahibinden sırasıyla Mac ortam bilgilerini, yerel kurulum onayını, ikinci cihaz bilgilerini ve Supabase kullanım verilerini al.
+
+Yeni Supabase projesi oluşturma.
+Ücretli hizmet alma.
+Gerçek kişisel veri işleme.
+Üretim kodlamasına başlama.
+Yeni ürün özelliği veya şartname revizyonu oluşturma.
+
+Tasarım çalışmalarına müdahale etme. Görsel tasarım sorumluluğu ürün direktörü ve proje sahibindedir.
+
+**GÖREV 001 HAZIRLIK RAPORU: KABUL EDİLDİ.**
+
+**ÜÇ TEKNİK KARAR: VERİLDİ.**
+
+**FAZ 0 FİZİBİLİTE İLERLEMESİ: 0/19 PASS.**
