@@ -38,9 +38,9 @@ Claude depoya yazar; ChatGPT yalnızca okur; ürün direktörü kararları proje
 ## Bekleyen proje sahibi girdileri (sırayla)
 1. ~~Mac ortam kontrol komutunun çıktısı~~ ALINDI → `docs/QA/faz0/ORTAM-RAPORU.md` (Xcode 27.2, iOS SDK 27.2; yalnızca iOS 26.5 simülatörü kurulu, iOS 17 simülatörü yok).
    1a. iOS 17 simülatör çalışma zamanı: **ERTELENDİ** (proje sahibi kararı, 25.11.2026 — şu an simülatör çalışması yapılmayacak). İlgili simülatör testleri bekletiliyor; hiçbir görev bu nedenle PASS sayılmaz.
-2. Yerel Supabase (OrbStack/Docker) kurulum onayı.
-3. Ödünç ikinci iPhone'un modeli ve iOS sürümü.
-4. Supabase Pro organizasyonu Usage ekranı verileri.
+2. Yerel Supabase (OrbStack/Docker) kurulum onayı — **ERTELENDİ** (Supabase konuları en sona bırakıldı, proje sahibi kararı 25.11.2026).
+3. Ödünç ikinci iPhone'un modeli ve iOS sürümü — **BEKLİYOR** (cihaz şu an yok; iPhone 8 Plus iOS 17'yi desteklemediği için uygun değil; iPhone 11 ve sonrası veya XS/XR gerekli).
+4. Supabase Pro organizasyonu Usage ekranı verileri — **ERTELENDİ** (en sona bırakıldı).
 
 ## Faz 0 görev durumu
 | Görev | Durum |
