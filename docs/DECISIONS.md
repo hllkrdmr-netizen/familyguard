@@ -27,6 +27,7 @@ Kayıt türleri: **[TAM METİN]** ürün direktörünün dosya olarak ilettiği 
 | Rev4 Kabul | Revizyon 4 kabulü ve Faz 0 hazırlık onayı | Tam metin |
 | Görev 001 | Faz 0 ücretsiz hazırlık talimatı | Tam metin |
 | Görev 001 Denetimi | Kanal güvenlik sürümü, iOS 17 test stratejisi, cihaz içi ölçüm | Tam metin |
+| Görev 001 Doğrulama Eki Onayı | Apple doğrulamaları, yeniden başlatma ve bölge izleme, App Attest geçici kimlik, CLServiceSession, APNs, HetrixTools | Tam metin |
 
 
 ---
@@ -3491,3 +3492,114 @@ Tasarım çalışmalarına müdahale etme. Görsel tasarım sorumluluğu ürün 
 **ÜÇ TEKNİK KARAR: VERİLDİ.**
 
 **FAZ 0 FİZİBİLİTE İLERLEMESİ: 0/19 PASS.**
+
+
+---
+
+## GÖREV 001 DOĞRULAMA EKİ / ÜRÜN DİREKTÖRÜ ONAYI [TAM METİN]
+
+**FAMILYGUARD — GÖREV 001 DOĞRULAMA EKİ / ÜRÜN DİREKTÖRÜ ONAYI**
+
+**Denetim sonucu: KABUL EDİLDİ.**
+
+docs/QA/faz0/GOREV-001-DOGRULAMA-EKI.md dosyası doğrudan GitHub üzerinden okunmuş ve değerlendirilmiştir.
+
+**A. APPLE TEKNİK DOĞRULAMALARI**
+
+1. Rapordaki resmî belge doğrulamaları ve iOS 27 cihaz uyumluluğu düzeltmesi kabul edilmiştir.
+2. StoreKit 2 ayrıntılarının henüz doğrulanmadığı kaydı korunacaktır.
+3. iOS 17 minimum deployment target değişmeyecektir.
+4. Zorla kapatma ve işletim sistemi tarafından sonlandırılma farklı test senaryoları olarak ele alınacaktır.
+5. Zorla kapatma sonrasında konum olaylarıyla yeniden başlatma garanti edilmeyecektir.
+6. Time Sensitive bildirimler kullanıcının sistem ayarlarından bağımsız olarak çalışacakmış gibi gösterilmeyecektir.
+7. Critical Alerts yetkisinin verileceği varsayılmayacaktır.
+
+**B. YENİDEN BAŞLATMA VE GÜVENLİ BÖLGE İZLEME**
+
+8. İlk kilit açılışına kadar bölge izleme sınırlaması F0-04 ve F0-07 test kapsamına dahil edilecektir.
+9. İlk kilit açılışından sonra izleme mekanizmasının yeniden etkinleşmesi ayrıca doğrulanacaktır.
+10. Cihazın yeniden başlatılması, ilk kilit açılışı ve güvenli bölge izleme durumları birbirinden ayrılacaktır.
+11. Ebeveyn cihazı karşı cihazın yeniden başlatıldığını doğrulayamıyorsa yeniden başlatılma iddiasında bulunmayacaktır.
+12. Güncel bölge izleme durumu doğrulanamadığında uygun belirsizlik metni gösterilecektir:
+
+"Güvenli bölge bildirimlerinin güncel durumu bilinmiyor."
+
+13. Kesin olarak kapalı olduğu doğrulanmış izleme durumu ile doğrulanamayan izleme durumu farklı gösterilecektir.
+14. Bölge izleme aktif değilken aktif olarak gösterilmesi kabul edilmeyecektir.
+15. Bu durum FG-004 tasarım referansında dikkate alınacaktır.
+
+**C. APP ATTEST — GEÇİCİ GELİŞTİRME KİMLİĞİ**
+
+16. F0-05 için geçici geliştirme App ID kullanılması teknik yöntem olarak onaylanmıştır.
+17. App ID kaydı proje sahibinin açık onayından önce oluşturulmayacaktır.
+18. Kalıcı production Bundle ID oluşturulmayacaktır.
+19. App Store Connect uygulama kaydı oluşturulmayacaktır.
+20. Geçici kimlik nihai marka seçimini kısıtlamayacaktır.
+21. App Attest desteği bulunmayan cihazlar için güvenli alternatif yöntem doğrulanacaktır.
+22. App Attest desteğinin bulunmaması hassas işlemlerin denetimsiz kabul edilmesine yol açmayacaktır.
+23. Yeniden yükleme, cihaz değiştirme ve yedekten geri yükleme sonrasında anahtar geçersizliği test edilecektir.
+24. Aynı cihazdaki farklı kullanıcılar için anahtar paylaşılmayacaktır.
+
+**D. CLSERVICESESSION VE iOS 17**
+
+25. CLServiceSession availability bilgisi resmî API referansı ve Xcode SDK tanımları üzerinden kesinleştirilecektir.
+26. iOS 17 üzerinde bulunmayan API'ler availability kontrolü olmadan kullanılmayacaktır.
+27. Gerektiğinde CLLocationManager temelli uyumlu alternatif değerlendirilecektir.
+28. iOS 17 alternatifinin temel konum ve güvenlik işlevlerini karşılaması gerekecektir.
+29. Alternatif yaklaşım gerçek cihaz ve simülatör testleriyle değerlendirilmeden teknik kabul verilmeyecektir.
+
+**E. APNs VE LOKALİZASYON**
+
+30. String Catalog kullanımı korunacaktır.
+31. APNs loc-key ve loc-args uyumu F0-18 kapsamında doğrulanacaktır.
+32. Bildirim testlerinde uygulamanın açık, arka planda ve kapalı olduğu durumlar ayrı değerlendirilecektir.
+33. Uygulama içi dil tercihi ile cihaz dili farklı olduğunda bildirim dilinin davranışı test edilecektir.
+34. Push payload içinde kişisel veri bulunmayacaktır.
+35. Türkçe, İngilizce ve sağdan sola dil düzeni fizibilite testlerine dahil edilecektir.
+
+**F. BAĞIMSIZ İZLEME SERVİSİ**
+
+36. HetrixTools birinci ücretsiz izleme servisi adayı olarak kabul edilmiştir.
+37. Resmî fiyatlandırma ve ürün sayfasında 15 ücretsiz monitör ve 1 dakikalık kontrol aralığı bulunmaktadır.
+
+https://hetrixtools.com/pricing/uptime-monitor/
+
+https://hetrixtools.com/uptime-monitor/
+
+38. Ticari kullanım koşulları ve ücretsiz hesap aktiflik şartları doğrulanacaktır.
+39. Kontrol aralığı ile gerçek kesinti algılama ve bildirim süresi birbirinden ayrılacaktır.
+40. Sağlık kontrolü yalnızca HTTP erişilebilirliğini değil, ilgili kritik altyapı bileşenlerinin işlevsel durumunu kişisel veri kullanmadan değerlendirecektir.
+41. Gerçek SOS oluşturulmayacaktır.
+42. Proje sahibi onayı olmadan HetrixTools hesabı açılmayacaktır.
+43. Ücretli hizmet alınmayacaktır.
+44. Better Stack ve UptimeRobot yedek seçenek olarak korunacaktır.
+
+**G. PROJE DURUMU**
+
+Görev 001 hazırlık raporu: KABUL EDİLDİ.
+
+Görev 001 doğrulama eki: KABUL EDİLDİ.
+
+Faz 0 fizibilite ilerlemesi: 0/19 PASS.
+
+Ürün kapsamı: KİLİTLİ.
+
+Revizyon 4: GEÇERLİ.
+
+Yeni şartname revizyonu: GEREKMİYOR.
+
+Supabase test projesi: OLUŞTURULMAYACAK.
+
+Üretim kodlaması: BAŞLANMAYACAK.
+
+Marka seçimi: BEKLİYOR.
+
+Tasarım sorumluluğu: Ürün direktörü ve proje sahibi.
+
+Bu onayı karar geçmişine kaydet. Mevcut teknik belirsizlikleri ilgili Faz 0 görevleri kapsamında takip et.
+
+Proje sahibinden beklenen Mac ortam bilgileri ve diğer girdiler gelmeden kurulum veya hesap değişikliği yapma.
+
+Yeni ürün özelliği veya araştırma turu başlatma.
+
+**DOĞRULAMA EKİ ONAYLANDI.**
