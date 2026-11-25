@@ -9,7 +9,7 @@
 | Karar geçmişi | KABUL EDİLDİ (`docs/DECISIONS.md`) |
 | Faz 0 görev planı | ONAYLI (`docs/QA/faz0/FAZ0-GOREV-LISTESI.md`) |
 | Faz 0 ilerlemesi | 0/19 PASS |
-| Görev 001 (ücretsiz hazırlık) | RAPOR KABUL EDİLDİ (`docs/QA/faz0/GOREV-001-RAPORU.md`); Apple ve izleme doğrulaması devam ediyor |
+| Görev 001 (ücretsiz hazırlık) | RAPOR KABUL EDİLDİ; doğrulama eki teslim edildi (`docs/QA/faz0/GOREV-001-DOGRULAMA-EKI.md`) — ürün direktörü değerlendirmesi bekliyor |
 | Marka seçimi | BEKLİYOR — Wingfold koşullu birinci, Eavely koşullu yedek; iç kod adı FamilyGuard |
 | Hukuki uygunluk | BEKLİYOR |
 | Faz D tasarım | DEVAM EDİYOR — proje sahibi ve ürün direktörü ebeveyn ana ekranı için 3 konsept hazırlıyor |
